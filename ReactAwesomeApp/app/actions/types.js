@@ -1,0 +1,1 @@
+export const SET_SEARCHED_GIFS = 'SET_SEARCHED_GIFS';
