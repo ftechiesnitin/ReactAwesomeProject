@@ -10,13 +10,13 @@ class Home extends Component {
   }
   searchPressed(){
     this.setState({searching: true});
-    this.props.fetchRecipe({ searching: false, searchKey: this.state.searchKey  }).then(() => {
+    this.props.fetchGifs({ searching: false, searchKey: this.state.searchKey  }).then(() => {
       this.setState({searching: false});
     });
   }
 
   recipes(){
-    return Object.keys(this.props.searchedRecipes).map(key => this.props.searchedRecipes[key]);
+    return Object.keys(this.props.searchedGifs).map(key => this.props.searchedGifs[key]);
   }
 
   render(){
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
 
 function mapStateToProps(state){
   return {
-    searchedRecipes: state.searchedRecipes
+    searchedGifs: state.searchedGifs
   };
 }
 
