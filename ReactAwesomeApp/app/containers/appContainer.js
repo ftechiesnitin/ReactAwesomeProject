@@ -3,10 +3,12 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { ActionCreators } from '../actions';
 import Home from './home';
+import Login from './login';
 
 class appContainer extends Component {
   render() {
-    return <Home {...this.props} />
+    // return <Home {...this.props} />
+    return <Login />
   }
 }
 
